@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Snitch Reach The Wall</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Quidditch: Snitch Run</h1>
+        <div class="overlay-text visible">
+            <p class="info">Use &lArr; &uArr; &dArr; &rArr; to reach the finish line on the right</p>
+            <p class="info">If you hit a wall your position will be reseted to the left</p>
+            <p class="info">You have 3 lifes. You will lose one if the timer expires!</p>
+            <p class="info">Speed up your move to Level Up quickly!</p>
+            Click to Start
+        </div>
+        <div id="game-over-text" class="overlay-text">
+            GAME OVER
+            <span id="game-over-level"class="overlay-text-small level">Level 1
+            </span>
+            <span class="overlay-text-small">Click to Restart</span>
+        </div>
+        <div id="victory-text" class="overlay-text">
+            VICTORY
+            <span id="victory-level"class="overlay-text-small level">Level 1 Complete</span>
+            <span class="overlay-text-small">Click for Next Level</span>
+        </div>
+        <div id="playground">
+            <button id="startGame">LEVEL 1</button>
+            <div id="safeTimer">
+                <div>Time Left: </div>
+                <div id="countdown">
+                    <div id="countdown-number"></div>
+                </div>
+            </div>
+            <p id="lifes">Lifes Left:
+                <span class='life'>&#x1F497</span>
+                <span class='life'>&#x1F497</span>
+                <span class='life'>&#x1F497</span> 
+            </p>
+            <div id="player"></div>
+            <div id="obstacles">
+            </div>
+            <div class="finishLine"></div>
+        </div>
+        <h4 align="center">Gustaman Project To The Moon</h4>
+    <script src="app.js"></script>
+    </body>
+</html>

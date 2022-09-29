@@ -1,0 +1,193 @@
+body {
+    background-color: #082a3a;
+}
+
+h1 {
+    color: #ed6b5b;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'SEGA LOGO FONT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('./fonts/SEGA.woff'), url('./fonts/SEGA.woff') format('woff');
+    }
+.overlay-text {
+    height: 300px;
+    width: 600px;
+    border-radius: 2px;
+    top: calc(50% - 150px);
+    left: calc(50% - 300px);
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #00cc00;
+    font-family: 'SEGA LOGO FONT', serif;
+    transition: background-color 500ms, font-size 500ms;
+}
+.overlay-text-small {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #00e6f6;
+    font-weight: 100;
+}
+.info{
+    font-family: sans-serif;
+    color: #00e6f6;
+    font-size: 15px;
+}
+.level{
+    font-family: sans-serif;
+}
+.overlay-text.visible {
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+}
+@keyframes overlay-grow {
+    from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+    }
+    to {
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 2em;
+    }
+}
+#playground{
+    height: 300px;
+    width: 600px;
+    background-image: url('./photos/playground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 300px);
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.finishLine{
+    height: 298px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; 
+    background-image: url('./photos/flag.gif');
+    background-size: 60px;
+    background-repeat: repeat;
+}
+#player{
+    height: 15px;
+    width: 15px;
+    background-image: url('./photos/player.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 0;
+    border: 0.1px solid rgb(255, 255, 255);
+    z-index: 2;
+}
+.obstacle{
+    width: 15px;
+    position: absolute;
+    border-radius: 1px;
+    background-image: url('./photos/brickwall.jpg');
+    background-size: 60px;
+    background-repeat: repeat;
+    z-index: 10;
+}
+.obstacle *{
+    position: absolute;
+}
+#lifes{
+    font-family: serif;
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    font-size: 15px;
+    color: #ed6b5b;
+}
+#safeTimer{
+    font-family: serif;
+    position: absolute;
+    top: -22px;
+    right: 180px;
+    font-size: 15px;
+    color: #ed6b5b
+}
+#countdown-number {
+    color: black;
+    display: inline-block;
+    line-height: 20px;
+    color: #00e6f6;
+}
+#countdown {
+    position: absolute;
+    top: -102;
+    left: 70;
+    margin: auto;
+    margin-top: 100px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+#startGame{
+    background:#1AAB8A;
+    color:#fff;
+    border:none;
+    position:relative;
+    top: -25px;
+    height:20px;
+    font-size:1.1em;
+    padding:0 1em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+#startGame:hover{
+    background:#fff;
+    color:#1AAB8A;
+}
+#startGame:before,#startGame:after{
+    content:'';
+    position:absolute;
+    top:20;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+}
+#startGame:after{
+    right:inherit;
+    top:0;
+    left:0;
+    bottom:0;
+}
+#startGame:hover:before,#startGame:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+h4 {
+    left: 33%;
+    bottom: 10%;
+    position: absolute;
+    font-family: serif;
+    color: #ed6b5b;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+h4:hover{
+    color: #1fe083;
+}
